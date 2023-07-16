@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <script>
+      function login() {
+        var username = document.getElementById("name");
+        var password = document.getElementById("pass");
+        var url =
+          "cexample?username=" +
+          encodeURIComponent(username.value) +
+          "&password=" +
+          encodeURIComponent(password.value);
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", url, true);
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+            var response = xhr.responseText;
+            document.getElementById("response").innerHTML = response;
+            console.log(response);
+            username.value = "";
+            password.value = "";
+          }
+        };
+        xhr.send();
+      }
+    </script>
+  </head>
+
+  <body>
+    <form>
+      Name : <input type="text" name="name" id="name" /> Password :
+      <input type="text" name="pass" id="pass" />
+
+      <input type="button" onclick="login()" value="Save Cookie" />
+      <div id="response"></div>
+    </form>
+    <hr />
+    <form action="viewCookie">
+      <br /><input type="submit" value="View Cookie" />
+    </form>
+  </body>
+</html>

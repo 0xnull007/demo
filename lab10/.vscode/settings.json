@@ -1,0 +1,7 @@
+{
+  "liveServer.settings.port": 5501,
+  "java.project.referencedLibraries": [
+    "lib/**/*.jar",
+    "c:\\Users\\0xnull\\apache-tomcat-10.1.10\\lib\\servlet-api.jar"
+  ]
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      function Svalidate() {
+        var email = document.getElementById("Semail").value;
+
+        var Email = document.getElementById("divSemail");
+        if (email) {
+          let len = email.length;
+          let at = email.indexOf("@");
+          let dot = email.indexOf(".");
+
+          if (at == -1 || dot == -1 || at > dot || at + 1 == dot) {
+            Email.innerHTML = "Email is in incorrect format!!";
+          } else {
+            if (at > 0 && dot > at + 1 && dot < len) {
+              Email.innerHTML = "Email is in correct format!!";
+            }
+          }
+        }
+      }
+
+      function Tvalidate() {
+        var email = document.getElementById("Temail").value;
+        var Email = document.getElementById("divTemail");
+        if (email) {
+          let len = email.length;
+          let at = email.indexOf("@");
+          let dot = email.indexOf(".");
+
+          if (at == -1 || dot == -1 || at > dot || at + 1 == dot) {
+            Email.innerHTML = "Email is in incorrect format!!";
+          } else {
+            if (at > 0 && dot > at + 1 && dot < len) {
+              Email.innerHTML = "Email is in correct format!!";
+            }
+          }
+        } else {
+          Email.innerHTML = "Please Email field!";
+          return false;
+        }
+      }
+
+      function letternumber(event) {
+        var keychar = event.key;
+        if (".+-0123456789".indexOf(keychar) > -1) return true;
+        else return false;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Student Sign Up</h1>
+    <form action="signup" method="post">
+      Email : <input type="email" name="email" id="Semail" required /> <br />
+      <div id="divSemail"></div>
+      <br />
+      Name : <input type="text" name="name" required /> <br />
+      <br />
+      Semester : <input type="number" name="semester" required /> <br />
+      <br />
+      Password : <input type="password" name="password" required /> <br />
+      <br />
+      Phone No. :
+      <input type="text" name="phone" id="Sphone" required />
+      <br />
+      <input type="hidden" name="user_type" value="0" /> <br />
+      <input type="submit" value="Sign Up" />
+    </form>
+  </body>
+</html>

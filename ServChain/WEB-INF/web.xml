@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+	<servlet>
+		<servlet-name>First</servlet-name>
+		<servlet-class>First</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Second</servlet-name>
+		<servlet-class>Second</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>firstInclude</servlet-name>
+		<servlet-class>firstInclude</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>secondInclude</servlet-name>
+		<servlet-class>secondInclude</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>firstRedirect</servlet-name>
+		<servlet-class>firstRedirect</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>newPage</servlet-name>
+		<servlet-class>newPage</servlet-class>
+	</servlet>
+	<servlet-mapping> 
+		<servlet-name>First</servlet-name>
+		<url-pattern>/First</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Second</servlet-name>
+		<url-pattern>/2</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>firstInclude</servlet-name>
+		<url-pattern>/firstInclude</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>secondInclude</servlet-name>
+		<url-pattern>/secondInclude</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>firstRedirect</servlet-name>
+		<url-pattern>/firstRedirect</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>newPage</servlet-name>
+		<url-pattern>/newPage</url-pattern>
+	</servlet-mapping>
+	
+	<!-- <welcome-file-list>
+		<welcome-file>in.html</welcome-file>
+	</welcome-file-list> -->
+
+
+</web-app>
